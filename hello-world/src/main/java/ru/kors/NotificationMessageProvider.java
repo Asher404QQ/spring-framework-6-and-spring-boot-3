@@ -1,4 +1,4 @@
-package kors;
+package ru.kors;
 
 public class NotificationMessageProvider implements MessageProvider{
     @Override

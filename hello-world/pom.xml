@@ -39,7 +39,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib</classpathPrefix>
-                            <mainClass>ru.kors.HelloWorld</mainClass>
+                            <mainClass>ru.ru.kors.HelloWorld</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

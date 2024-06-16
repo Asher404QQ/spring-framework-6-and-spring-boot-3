@@ -1,4 +1,4 @@
-package kors;
+package ru.kors;
 
 public class HelloWorldMessageProvider implements MessageProvider{
     public HelloWorldMessageProvider() {

@@ -1,4 +1,4 @@
-package kors;
+package ru.kors;
 
 public class SystemOutMessageHandler implements MessageHandler{
     private MessageProvider messageProvider;

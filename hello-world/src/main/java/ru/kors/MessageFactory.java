@@ -1,4 +1,4 @@
-package kors;
+package ru.kors;
 
 import java.util.Optional;
 import java.util.Properties;

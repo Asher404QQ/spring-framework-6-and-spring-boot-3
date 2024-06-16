@@ -1,4 +1,4 @@
-package kors;
+package ru.kors;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
