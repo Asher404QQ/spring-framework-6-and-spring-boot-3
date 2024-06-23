@@ -1,19 +1,11 @@
 package ru.kors;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
+@ComponentScan("ru.kors")
 public class ProjectConfig {
-    @Bean
-    public MessageProvider messageProvider() {
-        return new HelloWorldMessageProvider();
-    }
 
-    @Bean
-    public MessageHandler messageHandler(MessageProvider messageProvider) {
-        MessageHandler handler = new SystemOutMessageHandler();
-        handler.setMessageProvider(messageProvider);
-        return handler;
-    }
 }

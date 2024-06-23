@@ -1,5 +1,8 @@
 package ru.kors;
 
+import org.springframework.stereotype.Component;
+
+@Component("helloProvider")
 public class HelloWorldMessageProvider implements MessageProvider{
     public HelloWorldMessageProvider() {
         System.out.println("Init HelloWorldMessageProvider class");

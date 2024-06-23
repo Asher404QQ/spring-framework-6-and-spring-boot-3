@@ -1,0 +1,70 @@
+@startuml
+
+!theme plain
+top to bottom direction
+skinparam linetype ortho
+
+class AbstractApplicationContext
+class AbstractAutowireCapableBeanFactory
+class AbstractBeanFactory
+class AbstractRefreshableApplicationContext
+class AbstractRefreshableConfigApplicationContext
+class AbstractXmlApplicationContext
+class AnnotationConfigApplicationContext
+interface AnnotationConfigRegistry << interface >>
+interface AotApplicationContextInitializer<C> << interface >>
+interface ApplicationContext << interface >>
+interface ApplicationContextInitializer<C> << interface >>
+interface AutowireCapableBeanFactory << interface >>
+interface BeanDefinitionRegistry << interface >>
+interface BeanFactory << interface >>
+class ClassPathXmlApplicationContext
+interface ConfigurableApplicationContext << interface >>
+interface ConfigurableBeanFactory << interface >>
+interface ConfigurableListableBeanFactory << interface >>
+class DefaultListableBeanFactory
+class FileSystemXmlApplicationContext
+class GenericApplicationContext
+class GenericGroovyApplicationContext
+class GenericXmlApplicationContext
+interface ListableBeanFactory << interface >>
+class SimpleBeanDefinitionRegistry
+class SimpleJndiBeanFactory
+class StaticApplicationContext
+class StaticListableBeanFactory
+
+AbstractApplicationContext                   -[#008200,dashed]-^  ConfigurableApplicationContext              
+AbstractAutowireCapableBeanFactory           -[#000082,plain]-^  AbstractBeanFactory                         
+AbstractAutowireCapableBeanFactory           -[#008200,dashed]-^  AutowireCapableBeanFactory                  
+AbstractBeanFactory                          -[#008200,dashed]-^  ConfigurableBeanFactory                     
+AbstractRefreshableApplicationContext        -[#000082,plain]-^  AbstractApplicationContext                  
+AbstractRefreshableConfigApplicationContext  -[#000082,plain]-^  AbstractRefreshableApplicationContext       
+AbstractXmlApplicationContext                -[#000082,plain]-^  AbstractRefreshableConfigApplicationContext 
+AnnotationConfigApplicationContext           -[#008200,dashed]-^  AnnotationConfigRegistry                    
+AnnotationConfigApplicationContext           -[#000082,plain]-^  GenericApplicationContext                   
+AotApplicationContextInitializer             -[#008200,plain]-^  ApplicationContextInitializer               
+AotApplicationContextInitializer             -[#595959,dashed]->  ConfigurableApplicationContext              
+ApplicationContext                           -[#008200,plain]-^  BeanFactory                                 
+ApplicationContext                           -[#008200,plain]-^  ListableBeanFactory                         
+ApplicationContextInitializer                -[#595959,dashed]->  ConfigurableApplicationContext              
+AutowireCapableBeanFactory                   -[#008200,plain]-^  BeanFactory                                 
+ClassPathXmlApplicationContext               -[#000082,plain]-^  AbstractXmlApplicationContext               
+ConfigurableApplicationContext               -[#008200,plain]-^  ApplicationContext                          
+ConfigurableBeanFactory                      -[#008200,plain]-^  BeanFactory                                 
+ConfigurableListableBeanFactory              -[#008200,plain]-^  AutowireCapableBeanFactory                  
+ConfigurableListableBeanFactory              -[#008200,plain]-^  ConfigurableBeanFactory                     
+ConfigurableListableBeanFactory              -[#008200,plain]-^  ListableBeanFactory                         
+DefaultListableBeanFactory                   -[#000082,plain]-^  AbstractAutowireCapableBeanFactory          
+DefaultListableBeanFactory                   -[#008200,dashed]-^  BeanDefinitionRegistry                      
+DefaultListableBeanFactory                   -[#008200,dashed]-^  ConfigurableListableBeanFactory             
+FileSystemXmlApplicationContext              -[#000082,plain]-^  AbstractXmlApplicationContext               
+GenericApplicationContext                    -[#000082,plain]-^  AbstractApplicationContext                  
+GenericApplicationContext                    -[#008200,dashed]-^  BeanDefinitionRegistry                      
+GenericGroovyApplicationContext              -[#000082,plain]-^  GenericApplicationContext                   
+GenericXmlApplicationContext                 -[#000082,plain]-^  GenericApplicationContext                   
+ListableBeanFactory                          -[#008200,plain]-^  BeanFactory                                 
+SimpleBeanDefinitionRegistry                 -[#008200,dashed]-^  BeanDefinitionRegistry                      
+SimpleJndiBeanFactory                        -[#008200,dashed]-^  BeanFactory                                 
+StaticApplicationContext                     -[#000082,plain]-^  GenericApplicationContext                   
+StaticListableBeanFactory                    -[#008200,dashed]-^  ListableBeanFactory                         
+@enduml

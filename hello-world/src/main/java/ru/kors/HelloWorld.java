@@ -18,7 +18,7 @@ public class HelloWorld {
 
     private static void annotationsBeanHelloWorld() {
         ApplicationContext ctx = new AnnotationConfigApplicationContext(ProjectConfig.class);
-        MessageHandler handler = ctx.getBean("messageHandler", MessageHandler.class);
+        MessageHandler handler = ctx.getBean("systemHandler", MessageHandler.class);
         handler.handling();
     }
     
